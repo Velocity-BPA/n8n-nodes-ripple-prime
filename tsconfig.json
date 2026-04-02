@@ -1,36 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es2019",
+    "lib": ["es2019"],
     "module": "commonjs",
-    "lib": ["ES2020"],
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./",
+    "removeComments": true,
+    "declaration": true,
     "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "typeRoots": ["./node_modules/@types"]
+    "resolveJsonModule": true
   },
-  "include": [
-    "credentials/**/*.ts",
-    "nodes/**/*.ts",
-    "index.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "test"
-  ]
+  "include": ["nodes/**/*", "credentials/**/*"],
+  "exclude": ["dist", "node_modules", "**/*.test.ts"]
 }
